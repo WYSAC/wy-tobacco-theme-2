@@ -17,9 +17,10 @@ get_header(); ?>
 			<header class="page-header col-md-12">
 
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' ); //This has a filter, found in functions.php, that determines the formatting of the prefix.  This also controls which .section-title appears above the archive the_archive_title
+					the_archive_title( '', '</h1>' ); //This has a filter, found in functions.php, that determines the formatting of the prefix.  This also controls which .section-title appears above the archive the_archive_title
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+				<div class="taxonomy-description"><?php echo get_the_author_meta('description');?></div>
 			</header><!-- .page-header -->
 
 	<div class="col-md-8">
@@ -53,7 +54,7 @@ get_header(); ?>
 						get_sidebar ('resource'); }
 					else {
 						get_sidebar('archive');
-					} ?>
+					}?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
