@@ -1280,6 +1280,15 @@ a:hover.category-label{
 
 }
 
+.section-title {
+	font-style:normal;
+	font-size:1.0em;
+	color:#55565A;
+	line-height: 1.4;
+	border-bottom: thin solid gray;
+	padding-bttom:10px;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

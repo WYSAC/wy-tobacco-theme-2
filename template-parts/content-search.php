@@ -26,6 +26,7 @@
 
 			| <?php the_time('m.d.Y');?></span>
 		</div><!-- .entry-meta -->
+		
 			<?php the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php endif; ?>
 
