@@ -384,7 +384,7 @@ h1.home-page-heading {
 
 .page-header {
 	border:none;
-	margin:0 0;
+	margin:0 0 1.5em;
 }
 
 p {
@@ -1283,10 +1283,11 @@ a:hover.category-label{
 .section-title {
 	font-style:normal;
 	font-size:1.0em;
-	color:#55565A;
+	color:rgb(151,139,134);
 	line-height: 1.4;
-	border-bottom: thin solid gray;
-	padding-bttom:10px;
+	border-bottom: thin solid #55565A;
+	padding:0 0 10px;
+	margin-bottom:2em;
 }
 
 /*--------------------------------------------------------------

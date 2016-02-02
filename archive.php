@@ -10,18 +10,19 @@
 get_header(); ?>
 <div class="row">
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main col-md-8" role="main">
+		<main id="main" class="site-main col-md-12" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				
+			<header class="page-header col-md-12">
+
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="page-title">', '</h1>' ); //This has a filter, found in functions.php, that determines the formatting of the prefix.  This also controls which .section-title appears above the archive the_archive_title
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
+	<div class="col-md-8">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -45,15 +46,16 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+	</div>
 
+		<?php
+					if ( in_category(1) ) {
+						get_sidebar ('resource'); }
+					else {
+						get_sidebar('archive');
+					} ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php
-				if ( in_category(1) ) {
-					get_sidebar ('resource'); }
-				else {
-					get_sidebar('archive');
-				} ?>
 </div><!--.row-->
 <?php get_footer(); ?>

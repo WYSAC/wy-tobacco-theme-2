@@ -12,22 +12,28 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="archive-entry-meta"> <span class="post-date">
-			<?php
-						if ( in_category(array('2','3','4','5')) ) { //If a publications cat or child-cat
-							$categories = get_the_category(); //get just the first category
-									if ( ! empty( $categories ) ) {
-					    		echo esc_html( $categories[0]->name );
+				<div class="archive-entry-meta"> <span class="post-date">
+					<?php
+								if ( in_category(array('2','3','4','5')) ) { //If a publications cat or child-cat
+									$categories = get_the_category(); //get just the first category
+											if ( ! empty( $categories ) ) {
+							    		echo esc_html( $categories[0]->name );
+										}
 								}
-						}
-						else { //if just in the resources, get the post type
-							echo get_post_format( $post );
-						} ?>
+								else { //if just in the resources, get the post type
+									echo get_post_format( $post );
+								} ?>
 
-			| <?php the_time('m.d.Y');?></span>
-		</div><!-- .entry-meta -->
-		
-			<?php the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					| <?php the_time('m.d.Y');?></span>
+				</div><!-- .entry-meta -->
+
+				<?php the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<p class="entry-meta">By <?php if ( function_exists( 'coauthors_posts_links' ) ) { //get the co-authors stuff
+								coauthors_posts_links();
+							}
+							else {
+								the_author_posts_link();
+							} ?></p>
 		<?php endif; ?>
 
 	</header><!-- .entry-header -->

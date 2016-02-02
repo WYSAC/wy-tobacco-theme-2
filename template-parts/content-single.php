@@ -29,7 +29,7 @@
 						wp_reset_query();
 						?></h2>
 
-		<div class="entry-meta">
+		<div class="entry-meta"> By
 
 		<?php if ( function_exists( 'coauthors_posts_links' ) ) {
 			coauthors_posts_links();
@@ -44,7 +44,7 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
