@@ -240,7 +240,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_filter( 'get_the_archive_title', function ($title) {
     if ( is_category('1') ) {
-            $title = single_cat_title( ' ', false );
+            $title = single_cat_title( '<h1 class="page-title">', false );
         } elseif ( is_category() ) {
         	  $title = single_cat_title ('<h2 class="section-title">Publications</h2><h1 class="page-title">', false);
         }

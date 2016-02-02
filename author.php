@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying author pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -20,6 +20,11 @@ get_header(); ?>
 					the_archive_title( '', '</h1>' ); //This has a filter, found in functions.php, that determines the formatting of the prefix.  This also controls which .section-title appears above the archive the_archive_title
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+				<div class="taxonomy-description author-bio">
+					<?php
+						echo get_wp_user_avatar(get_the_author_meta('ID'), 115, 'left');
+						echo get_the_author_meta('description');
+						?></div>
 			</header><!-- .page-header -->
 
 	<div class="col-md-8">
@@ -48,12 +53,7 @@ get_header(); ?>
 		<?php endif; ?>
 	</div>
 
-		<?php
-					if ( in_category(1) ) {
-						get_sidebar ('resource'); }
-					else {
-						get_sidebar('archive');
-					}?>
+		<?php get_sidebar('archive'); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
