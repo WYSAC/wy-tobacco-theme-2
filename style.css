@@ -289,7 +289,7 @@ textarea {
 ## Headers
 --------------------------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
-	padding:0.7em 0;
+	padding:0 0;
 }
 
 h1,
@@ -356,7 +356,7 @@ h6 {
 	font-weight:normal;
 	font-style: italic;
 	font-size: 1.6em;
-	line-height: 135%;
+	line-height: 150%;
 	color:rgb(132,132,132);
 	margin:0.8em 0 0.4em 0;
 	padding:0 0;
@@ -379,49 +379,12 @@ h1.home-page-heading {
 	font-family:'Open Sans', Arial, sans-serif;
 	font-size:1em;
 }
-/*--------------------------------------------------------------
-### Archive Pages
---------------------------------------------------------------*/
-
-.archive-article {
-	padding:0 0;
-	margin:0 0 3em;
-
-}
-.archive-entry-meta {
-	font-weight:normal;
-	color:rgb(151,139,134);
-	text-transform: uppercase;
-	font-family:'Open Sans', 'Helvetica', Arial, sans-serif;
-	font-size:1em;
-}
-.archive-entry-title {
-	margin:0;
-}
-
-.archive-entry-title a:link,
-.archive-entry-title a:visited {
-	font-style:normal;
-	font-size:1.0em;
-	color:#55565A;
-	line-height: 1.4;
-}
-
-.archive-entry-summary p {
-	font-family:'Open Sans', 'Helvetica', Arial, sans-serif;
-	margin-bottom:0.5em;
-}
-
-.archive-entry-footer {
-
-}
-
-
 
 /*--------------------------------------------------------------*/
 
 .page-header {
 	border:none;
+	margin:0 0;
 }
 
 p {
@@ -1117,7 +1080,7 @@ text-transform: none;
 
 .linkarea li {
 	margin-bottom:1.2em;
-	min-height:400px;
+	min-height:325px;
 }
 
 .linkarea img {
@@ -1281,41 +1244,41 @@ a:hover.category-label{
 /*--------------------------------------------------------------
 ## Archives
 --------------------------------------------------------------*/
-/* Add the Post Format (Resources) & Category (Publications) Icon before the Titles*/
 
-.archive .entry-title:before { /* Make some space for the icon */
-	display: inline-block;
-	content:" ";
-	width:16px;
-}
+.archive-article {
+	padding:0 0;
+	margin:0 0 3em;
 
-/* Icons for "resources" category archive */
-.archive .format-quote .entry-title:before { /* Quote Post Type */
-	content: url(images/icon-quote.png);
 }
-.archive .format-link .entry-title:before { /* Link Post Type */
-	content: url(images/icon-link.png);
+.archive-entry-meta {
+	font-weight:normal;
+	color:rgb(151,139,134);
+	text-transform: uppercase;
+	font-family:'Open Sans', 'Helvetica', Arial, sans-serif;
+	font-size:1em;
+	margin-bottom:15px;
 }
-.archive .format-video .entry-title:before { /* Video Post Type */
-	content: url(images/icon-video.png);
-}
-.archive .format-image .entry-title:before { /* Image Post Type */
-	content: url(images/icon-chart.png);
+.archive-entry-title {
+	margin:0;
+	margin-bottom:15px;
 }
 
-/* Icons for "Publications" category archive
- * These types are sorted by sub-categories, not post types
-*/
-.archive .category-reports .entry-title:before { /* pubs/ REPORTS */
-	content: url(images/icon-chart.png);
-}
-.archive .category-fact-sheets .entry-title:before { /* pubs/FACT SHEETS */
-	content: url(images/icon-chart.png);
-}
-.archive .category-briefs .entry-title:before { /* pubs/ BRIEFS */
-	content: url(images/icon-chart.png);
+.archive-entry-title a:link,
+.archive-entry-title a:visited {
+	font-style:normal;
+	font-size:1.0em;
+	color:#55565A;
+	line-height: 1.4;
 }
 
+.archive-entry-summary p {
+	font-family:'Open Sans', 'Helvetica', Arial, sans-serif;
+	margin-bottom:0.5em;
+}
+
+.archive-entry-footer {
+
+}
 
 /*--------------------------------------------------------------
 ## Comments

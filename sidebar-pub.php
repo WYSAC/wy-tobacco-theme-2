@@ -19,7 +19,7 @@
 				} ?>
 			</div>
 	<div class="widget">
-		<h2 class="widget-title">About This Report</h2>
+		<h2 class="widget-title">About This Publication</h2>
 			<p><?php // display description custom field
 							global $wp_query;
 							$postid = $wp_query->post->ID;

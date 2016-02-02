@@ -13,11 +13,18 @@
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="archive-entry-meta"> <span class="post-date">
-		<?php	$categories = get_the_category(); //get just the first category
-				if ( ! empty( $categories ) ) {
-    		echo esc_html( $categories[0]->name );
-			}
-			?> | <?php the_time('m.d.Y');?></span>
+			<?php
+						if ( in_category(array('2','3','4','5')) ) { //If a publications cat or child-cat
+							$categories = get_the_category(); //get just the first category
+									if ( ! empty( $categories ) ) {
+					    		echo esc_html( $categories[0]->name );
+								}
+						}
+						else { //if just in the resources, get the post type
+							echo get_post_format( $post );
+						} ?>
+
+			| <?php the_time('m.d.Y');?></span>
 		</div><!-- .entry-meta -->
 			<?php the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php endif; ?>
