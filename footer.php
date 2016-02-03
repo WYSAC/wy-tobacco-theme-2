@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 
 		<!--Insert the footer widgets from WP backend.  3-col of content-->

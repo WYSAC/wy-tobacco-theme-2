@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="margin-bottom:3em;">
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 				<div class="archive-entry-meta"> <span class="post-date">

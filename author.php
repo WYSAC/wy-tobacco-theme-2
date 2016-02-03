@@ -22,9 +22,10 @@ get_header(); ?>
 				?>
 				<div class="taxonomy-description author-bio">
 					<?php
-						echo get_wp_user_avatar(get_the_author_meta('ID'), 115, 'left');
+						echo get_wp_user_avatar(get_the_author_meta('ID'), 96, 'left');
 						echo get_the_author_meta('description');
 						?></div>
+						<h2 class="widget-title" style="border:none;">Publications by <?php echo get_the_author_meta('first_name') ?></h2>
 			</header><!-- .page-header -->
 
 	<div class="col-md-8">

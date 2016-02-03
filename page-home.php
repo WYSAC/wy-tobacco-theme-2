@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-<div id="slider">
-	<?php wdp_slider(1); ?>
+<div id="feature-image" class="row">
+<?php dynamic_sidebar('feature'); ?>
 		</div>
 <div class="row">
 		<div id="primary" class="content-area">

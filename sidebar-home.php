@@ -18,7 +18,7 @@
 			$args = array(
 				'posts_per_page' => 5,
 				'offset'=> 0,
-				'category' => 3 );
+				'category' => array(2,3,4,5) );
 
 			$myposts = get_posts( $args );
 

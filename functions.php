@@ -43,6 +43,7 @@ function wysac_wy_tobacco_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'linkarea-feature', 300, 150, array ('center', 'center'));
 	add_image_size( 'entry-feature-large', 750, 250, array ('center', 'center'));
+	add_image_size( 'feature-image', 1200, 400, array ('center', 'center'));
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -113,9 +114,9 @@ function wysac_wy_tobacco_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'					=> esc_html__('Homepage - Slider', 'wysac-wy-tobacco'),
-		'id'            => 'slider',
-		'description'   => 'Content for slider on home page ',
+		'name'					=> esc_html__('Homepage - Feature Image', 'wysac-wy-tobacco'),
+		'id'            => 'feature',
+		'description'   => 'Content for feature image on home page ',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',

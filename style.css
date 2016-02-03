@@ -344,7 +344,6 @@ h6 {
 --------------------------------------------------------------*/
 .entry-title {
 	font-family:'Merriweather', 'Georgia', serif;
-	font-weight:bold;
 	line-height: 150%;
 	font-size: 2.25em;
 	margin:0.8em 0 0.4em 0;
@@ -601,7 +600,7 @@ width: 85%;
 overflow-x: hidden;
 }
 
-.site-description {
+.site-description{
 	margin:0 -15%;  /* move the content over */
 	padding:1em 15%;
 	background-color: rgb(35, 40, 45);
@@ -620,38 +619,35 @@ overflow-x: hidden;
 }
 
 /*--------------------------------------------------------------
-### Slider  Content Area - Before Primary
+### Feature-Image Widget  Content Area - Before Primary
 --------------------------------------------------------------*/
 /*
-*  Formatting for Post Slider WD widget
+*  Formatting for feature image widget
 */
+#feature-image {
+	margin-top: 2em;
+}
 
-#slider {
-	margin:0.5em 0;
+#feature-image .widget_simpleimage{
+	position: relative;
+}
+#feature-image .widget_simpleimage .widget-title {
+	border:none;
+	position:absolute;
+	font-family: 'Merriweather', 'Georgia', serif;
+	font-weight: lighter;
+	color:white;
+	font-size: 1.35em;
+	margin-top:8em;
+	max-width: 700px;
+	line-height: 1.75;
+	padding: 1em;
+	background: rgb(53, 53, 53); /* fall back */
+	 background: rgba(53, 53, 53, 0.5);
+}
+#feature-image .widget_simpleimage img {
 	width:100%;
 }
-
-#slider p {
-	font-family:'Open Sans', Helvetica, Arial, sans-serif;
-	font-size:1.2em;
-	line-height: 150%;
-}
-
-#slider h1 {
-	font-family:'Merriweather', 'Georgia', serif;
-	font-weight:bold;
-	line-height: 125%;
-	font-size: 2.25em;
-	margin:0.8em 0 0.4em 0;
-	padding:0 0;
-}
-
-.wdps_slideshow_dots_container_0 {
-	margin-bottom:20px;
-}
-
-
-
 
 /*--------------------------------------------------------------
 ### Primary Content Area
@@ -1031,7 +1027,7 @@ text-transform: none;
 }
 
 .recent-entries li {
-	padding-bottom:0.5em;
+	padding-bottom:1em;
 }
 
 .recent-entries .post-date {
@@ -1153,7 +1149,7 @@ ul#menu-footer-menu {
 }
 
 .hentry {
-	margin: 0 0 3em;
+	margin: 0 0;
 }
 
 .byline,
@@ -1174,7 +1170,6 @@ ul#menu-footer-menu {
 }
 
 .attachment-entry-feature-large {
-	height:250px;
 	margin-top:0.8em;
 }
 
@@ -1277,7 +1272,6 @@ a:hover.category-label{
 }
 
 .archive-entry-footer {
-
 }
 
 .section-title {
@@ -1423,13 +1417,17 @@ object {
 	#page {
 		padding: 0 5%;
 	}
+
+	body {
+			width:auto;
+		}
 	/* Headings and Text */
 
-	:root {
-		font-size: 2.5vw;
-	}
-	.site-branding {
-		font-size:1.5vw;
+	/* Menu */
+
+	.main-navigation a {
+		font-size: 0.8em;
+		padding: 0.8em 1em;
 	}
 
 	/* Images and graphics */
@@ -1437,19 +1435,18 @@ object {
 		clear:both;
 		min-wdith:300px;
 	}
+.site-description {
+	font-size: 1em;
+}
 
+.widget-area {
+	padding-left: 15px;
+}
 }
 @media (max-width: 600px) {
 	/*phones large and small*/
 
-
-		/* Headings and Text */
-		:root {
-			font-size:3vw;
-		}
-		.site-branding {
-			font-size:2vw;
-		}
+		/* Swith the site description to abbreviations*/
 
 	img {
 		width:100%;
