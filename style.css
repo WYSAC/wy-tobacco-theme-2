@@ -638,7 +638,7 @@ overflow-x: hidden;
 	font-weight: lighter;
 	color:white;
 	font-size: 1.35em;
-	margin-top:8em;
+	top:165px;
 	max-width: 700px;
 	line-height: 1.75;
 	padding: 1em;
@@ -647,6 +647,7 @@ overflow-x: hidden;
 }
 #feature-image .widget_simpleimage img {
 	width:100%;
+	height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -660,9 +661,8 @@ overflow-x: hidden;
 ### Secondary, Default Widget Area
 --------------------------------------------------------------*/
 .widget-area {
-	padding:0 2em 0 5em;
+	padding: 0 0 0 2.5em;
 }
-
 
 /*--------------------------------------------------------------
 ### Footer Area
@@ -1004,6 +1004,11 @@ text-transform: none;
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
+}
+
+.widget_simpleimage img {
+	max-width:100%;
+	min-width:
 }
 
 
@@ -1413,44 +1418,49 @@ object {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
-@media (max-width:800px) {
-	#page {
-		padding: 0 5%;
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+	.linkarea li {
+		min-height: 0;
+	}
+	.site-description {
+		font-size: 1em;
 	}
 
-	body {
-			width:auto;
-		}
-	/* Headings and Text */
-
-	/* Menu */
-
-	.main-navigation a {
-		font-size: 0.8em;
-		padding: 0.8em 1em;
-	}
-
-	/* Images and graphics */
-	img {
-		clear:both;
-		min-wdith:300px;
-	}
-.site-description {
-	font-size: 1em;
 }
 
-.widget-area {
-	padding-left: 15px;
-}
-}
-@media (max-width: 600px) {
-	/*phones large and small*/
+/* Small devices (tablets, 768px to 992px) */
+@media (max-width: 992px) {
+				#page {
+					padding: 0 5%;
+				}
 
-		/* Swith the site description to abbreviations*/
+				body {
+						width:auto;
+					}
+				/* Headings and Text */
 
-	img {
-		width:100%;
-		clear:both;
-	}
+				/* Menu */
+				.main-navigation a {
+					font-size: 0.8em;
+					padding: 0.8em 1em;
+				}
+
+				.main-navigation ul ul {
+					top:1em;
+				}
+
+			/*Fix the feature image thing */
+			#feature-image .widget_simpleimage .widget-title {
+				font-size: 1.25em;
+			}
+
+			.widget-area {
+				padding-left: 15px;
+			}
+}
+
+/* Medium devices (desktops, 992px to 1200px) */
+@media (max-width: 1200px) {
 
 }

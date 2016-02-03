@@ -22,7 +22,7 @@
 				$myposts = get_posts( $args );
 
 				foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-					<li class="col-md-6">
+					<li class="col-md-6 col-sm-6">
 						<?php if ( has_post_thumbnail() ) :  //Get the Thumbnail for each post ?>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 						<?php the_post_thumbnail('linkarea-feature'); //Print the Thumbnail ?> </a> <?php endif; ?>
@@ -47,7 +47,7 @@
 			$myposts = get_posts( $args );
 
 			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-			<li class="col-md-6">
+			<li class="col-md-6 col-sm-6">
 				<?php if ( has_post_thumbnail() ) :  //Get the Thumbnail for each post ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php the_post_thumbnail('linkarea-feature'); //Print the Thumbnail ?> </a> <?php endif; ?>

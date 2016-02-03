@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div id="feature-image" class="row">
-<?php dynamic_sidebar('feature'); ?>
+<div class="col-md-12 col-sm-12"><?php dynamic_sidebar('feature'); ?></div>
 		</div>
 <div class="row">
 		<div id="primary" class="content-area">
