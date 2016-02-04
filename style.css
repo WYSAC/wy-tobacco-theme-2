@@ -13,11 +13,21 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-WYSAC Wyoming Tobacco is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+WYSAC Wyoming Tobacco theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
+____    __    ____ ____    ____  _______.     ___       ______
+\   \  /  \  /   / \   \  /   / /       |    /   \     /      |
+ \   \/    \/   /   \   \/   / |   (----`   /  ^  \   |  ,----'
+  \            /     \_    _/   \   \      /  /_\  \  |  |
+   \    /\    /        |  | .----)   |    /  _____  \ |  `----.
+    \__/  \__/         |__| |_______/    /__/     \__\ \______|
+Wyoming Survey & Analysis Center  |  University of Wyoming
+www.uwyo.edu/wysac  |  (C) 2016
+
 */
 
 /*--------------------------------------------------------------
@@ -1431,33 +1441,39 @@ object {
 
 /* Small devices (tablets, 768px to 992px) */
 @media (max-width: 992px) {
+				/* ---------------------------------------------
+				## GENERAL LAYOUT ADJUSTMENTS
+				------------------------------------------------*/
 				#page {
 					padding: 0 5%;
 				}
-
 				body {
-						width:auto;
-					}
-				/* Headings and Text */
+					width:auto;
+				}
+				.widget-area {
+					padding-left: 15px;
+				}
 
-				/* Menu */
-				.main-navigation a {
+				/* ---------------------------------------------
+				## MENU
+				------------------------------------------------*/
+				.main-navigation a { /* Make the text smaller and tighter*/
 					font-size: 0.8em;
 					padding: 0.8em 1em;
 				}
-
 				.main-navigation ul ul {
 					top:1em;
 				}
 
-			/*Fix the feature image thing */
+				/* ---------------------------------------------
+				## HOME PAGE FEATURE IMAGE
+				------------------------------------------------*/
 			#feature-image .widget_simpleimage .widget-title {
-				font-size: 1.25em;
+				font-size: 1.25em; /* make the font smaller and move the box down */
+				top:100px;
 			}
 
-			.widget-area {
-				padding-left: 15px;
-			}
+
 }
 
 /* Medium devices (desktops, 992px to 1200px) */

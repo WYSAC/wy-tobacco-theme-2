@@ -1,5 +1,19 @@
-HELPFUL NOTES
-WYSAC Wyoming Tobacco Project
+____    __    ____ ____    ____  _______.     ___       ______
+\   \  /  \  /   / \   \  /   / /       |    /   \     /      |
+ \   \/    \/   /   \   \/   / |   (----`   /  ^  \   |  ,----'
+  \            /     \_    _/   \   \      /  /_\  \  |  |
+   \    /\    /        |  | .----)   |    /  _____  \ |  `----.
+    \__/  \__/         |__| |_______/    /__/     \__\ \______|
+Wyoming Survey & Analysis Center  |  University of Wyoming
+www.uwyo.edu/wysac  |  (C) 2016
+
+
+_   _       _
+| \ | |     | |
+|  \| | ___ | |_ ___  ___
+| . ` |/ _ \| __/ _ \/ __|
+| |\  | (_) | ||  __/\__ \
+|_| \_|\___/ \__\___||___/
 
 
 || GENERAL CONTENT WRANGLING ||
@@ -52,29 +66,29 @@ There are three types of permalinks based on the type of URL:
 
 || SIDEBARS ||
 
-There are 5 sidebar templates to control what information appears in the right column for each type of page.
+There are 6 sidebar templates to control what information appears in the right column for each type of page and the .linkarea on the homepage.
 
 * Sidebars *
-1. Homepage: index only
+1. Home: index only
 2. Pub: publications category single posts and sub categories
 3. Resource: resource category single posts AND resource category archive page
 4. Archive: publication category archive and author archive page
 5. About : about page only
-
-      ** Tag archive page sidebar TK
+6. home-linkarea: index only
 
 * Sidebar Templates *
 All templates are saved as sidebar-[name].php and referenced in the page template by [name].
-1. -homepage
+1. -home
 2. -pub
 3. -resource
 4. -archive
 5. -about
+6. -home-linkarea
 
 * What's included in each sidebar ? *
 Sidebars can be coded or dynamic.  Coded sidebars are directly in the sidebar template.  Dynamic sidebars allow users to add content from the WP UI backend in the Widget menu.  Both types can be called within each page template.
 
-    > homepage <
+    > home <
       - image or promo :  dynamic_sidebar
       - Recent Publications  :  coded
       - Recent Resources  :  coded
@@ -95,13 +109,40 @@ Sidebars can be coded or dynamic.  Coded sidebars are directly in the sidebar te
       - Need Help? : coded
       - WYSAC blurb ; dynamic_sidebar
 
+    > home-linkarea <
+        - curated TOPICS sections
+        - the topics are coded to generate the recent entries lists for each Tags
+
 || HOMEPAGE CONTENT ||
 
 * Main Text *
-This text is be changed by editing the Home Page under Pages.  This page is set as the Front Page of the WP site in settings.
+This text is be changed by editing the Home Page under Pages.  This page is set as the Front Page of the WP site in Settings.
 
 * Right Sidebar *
-The recent lists in the sidebar are hard coded in the side-homepage.php template.  The promo image at the top is a Widget and can be edited by visiting Appearance / Widgets / Homepage Promo Image.
+The recent lists in the sidebar are hard coded in the side-home.php template.  The promo image at the top is a Widget and can be edited by visiting Appearance / Widgets / Homepage Promo Image.
 
-* Baseball Cards *
-The baseball cards are in a dynamic widget area.  
+* Link Area *
+The link area is hard coded using the -home-linkarea.php sidebar.  The topic headings and the tags queried are coded in the sidebar.
+
+|| POSTS ||
+
+* Magic Fields *
+The subtitle, description in the sidebar and the partner logos are generated using the Magic Fields plugin, which managed custom_fields.
+
+New fields or groups of fields can be managed through Magic Fields / Magic Fields
+
+    > Magic Fields within Posts <
+      - Subtitle: subtitle()
+      - Description: pub_description()
+      - Partner Logos: partner_logos()
+
+* Co-Authors *
+Co-authors are managed with the Co-Authors + plugin.  Authors are chosen in the post UI and are managed under Users.  Guest Authors are created under Users;  these are authors that are not also WP Users.
+
+* Table of Contents *
+The table of contents is managed with a plug-in.  It generated anchor links based on page breaks or sections created using the "Insert Titled Page Break" button in the visual editor.
+
+This also generates the titled pagination at the bottom of posts.  THIS TABLE OF CONTENTS WILL NOT HIDE IF IT IS NOT USED.
+
+* Feature Image *
+There is a default feature image.  Feature images always appear at the top of posts.
