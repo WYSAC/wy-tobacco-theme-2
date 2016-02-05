@@ -10,7 +10,7 @@
 
 ?>
 <div id="sidebar-pub" class="widget-area col-md-4 recent-entries">
-	<div class="widget">
+	<div class="widget col-md-12 col-sm-12 col-xs-12">
 		<h2 class="widget-title"> Table of Contents</h2>
 		<?php
 		//Print the formatted table of contents for the post
@@ -18,7 +18,7 @@
 					wptopc();
 				} ?>
 			</div>
-	<div class="widget">
+	<div class="widget col-md-12 col-sm-6 col-xs-12">
 		<h2 class="widget-title">About This Publication</h2>
 			<p><?php // display description custom field
 							global $wp_query;
@@ -35,7 +35,7 @@
 						</p>
 		</div>
 
-		<div class="widget">
+		<div class="widget col-md-12 col-sm-6 col-xs-12">
 			<h2 class="widget-title">Related Topics</h2>
 					<?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
 		</div>

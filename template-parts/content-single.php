@@ -16,7 +16,8 @@
 					if (cat_is_ancestor_of(2, $childcat) && has_post_thumbnail() ) {
 						echo '<a class="category-label" href="'.get_category_link($childcat->cat_ID).'">';
 					 	echo $childcat->cat_name . '</a><br/>';
-						echo the_post_thumbnail('entry-feature-large');
+						echo the_post_thumbnail('entry-feature-large hidden-sm hidden-xs');
+						echo the_post_thumbnail('entry-feature-small hidden-md hidden-lg');
 				 	}
 				 else echo '<span class="post-format-label">' .get_post_format(). '</span>';
 			 }
@@ -48,8 +49,5 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
-			//wysac_wy_tobacco_entry_footer();
-			?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

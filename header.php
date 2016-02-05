@@ -30,10 +30,38 @@
 				<div class="site-description hidden-md hidden-lg hidden-sm"><a href="http://www.uwyo.edu/wysac">WYSAC</a>  |  <a href="http://www.uwyo.edu">UWYO</a></div>
 				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span>Wyoming Tobacco</span> </br>Prevention & Control Evaluation<!--<?php bloginfo( 'name' ); ?>--></a></div>
 		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wysac-wy-tobacco' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle .nav-stacked" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		  </div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse navbar-ex1-collapse">
+				<?php
+							wp_nav_menu( array(
+							'menu'              => 'main-navigation',
+							'theme_location'    => 'primary',
+							'depth'             => 2,
+							'container'         => false,
+							'container_class'   => 'collapse navbar-collapse',
+							'container_id'      => 'bs-example-navbar-collapse-1',
+							'menu_class'        => 'nav navbar-nav',
+							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							'walker'            => new wp_bootstrap_navwalker())
+							);
+				        ?>
+		  </div>
+		</nav>
+
+
+
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container-fluid">

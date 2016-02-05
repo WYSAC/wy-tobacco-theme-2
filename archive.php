@@ -39,7 +39,13 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_pagination(); ?>
+			<nav class="pagination">
+				<?php the_posts_pagination( array(
+			    'mid_size' => 2,
+			    'prev_text' => __( '&#0171;', 'textdomain' ),
+			    'next_text' => __( '&#0187;', 'textdomain' ),
+					) ); ?>
+			</nav>
 
 		<?php else : ?>
 

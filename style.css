@@ -705,12 +705,6 @@ overflow-x: hidden;
 }
 
 /*--------------------------------------------------------------
-#### Widgets in Footer - 3 Columns
---------------------------------------------------------------*/
-
-
-
-/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -762,149 +756,97 @@ font-size: 0.65em;
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 200%;
+.navbar {
 	background-color: rgb(169, 87, 38);
 	margin:0 -15%;  /* move the content over */
 	padding:0 15%;
-
+	min-height: 0px;
+}
+.nav > li {
+	float:left;
 }
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin:0;
-	padding-left: 0;
-
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-	font-family: 'Open Sans', 'Arial', sans-serif;
-	text-transform:uppercase;
+.navbar-default .navbar-nav > li > a  {
 	color:white;
-	padding:0.8em 1.5em;
-	letter-spacing: 1px;
-	font-size: 0.9em;
-}
-.main-navigation a:hover {
-		background-color: rgb(102, 53, 23);
-
+	font-family:'Open Sans', 'Helvetica', Arial, sans-serif;
+	text-transform: uppercase;
+	font-size:0.9em;
 }
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a, /* .active = current page */
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a, /* .open = dropown menu links */
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+		color:white;
+		background-color: rgb(122, 60, 24);
 }
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+.dropdown-menu {
+	left:-1px; /*scoot it over */
+	top:99%; /*scoot it up */
 }
 
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
-	background-color: rgb(122, 75, 45);
-}
-
-/*--------------------------------------------------------------
-### Sub-Menus
---------------------------------------------------------------*/
-/* Sub Menu under the main navigation */
-ul.sub-menu {
-	background-color:rgb(129, 90, 65);
-	margin-top:1.95em;
+.nav ul.dropdown-menu {
+	background-color: rgb(81, 42, 19) ;
 	font-size:0.8em;
+	font-family:'Open Sans', 'Helvetica', Arial, sans-serif;
 }
 
-.sub-menu a {
-text-transform: none;
+.dropdown-menu > li > a {
+	color:white;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+	background-color:rgb(122, 60, 24);
+	color:white;
+}
+/*--------------------------------------------------------------
+## Archive pagination
+--------------------------------------------------------------*/
+
+.page-numbers,
+a.page-numbers {
+	padding:0.8em;
+	border:1px solid rgb(198, 198, 198);
+	margin:0 0;
+	border-radius:3px;
+	font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+	font-size:1em;
+	color:rgb(38, 38, 38);
+}
+
+a:hover.page-numbers,
+a:focus.page-numbers {
+	background-color: rgb(232, 229, 229);
+	padding:0.8em;
+}
+
+span.page-numbers.current {
+	background-color: rgb(200, 193, 193);
 }
 
 /*--------------------------------------------------------------
-## Small Menu - Collapse Main Navigation
+## Post pagination
 --------------------------------------------------------------*/
-/* Small menu for @media size changes */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+
+a.next-link,
+a.previous-link {
+	color:rgb(74,74,74);
+	font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+	font-size:1em;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+.next-link:hover,
+.previous-link:hover {
+	color:rgb(194, 125, 56);
 }
 
 /*--------------------------------------------------------------
@@ -1009,6 +951,7 @@ text-transform: none;
 	padding-top:2em;
 	font-style:normal;
 	color:rgb(74,74,74);
+	margin-top:0;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -1119,11 +1062,12 @@ img.magic_fields {
 
 #colophon .widget-title {
 	text-transform:uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-weight: normal;
 	border:none;
 	margin:0 0;
 	padding:0.8em 0;
+	line-height: 1.5;
 }
 
 /* footer menu widget */
@@ -1184,7 +1128,9 @@ ul#menu-footer-menu {
 	line-height: 200%;
 }
 
-.attachment-entry-feature-large {
+.attachment-entry-feature-large,
+.attachment-entry-feature-small {
+	max-height: 300px;
 	margin-top:0.8em;
 }
 
@@ -1201,7 +1147,6 @@ display:none;
 	font-family: 'Open Sans', 'Arial', sans-serif;
 	font-size:0.7em;
 	text-transform: uppercase;
-	/*border-top: solid 1px rgb(198, 198, 198);*/
 	letter-spacing: 2px;
 	padding-top: 5px;
 }
@@ -1241,6 +1186,7 @@ a:hover.category-label{
 .posted-on a {
 	color:rgb(59, 59, 59);
 }
+
 
 
 /*--------------------------------------------------------------
@@ -1428,55 +1374,138 @@ object {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
-	.linkarea li {
-		min-height: 0;
-	}
-	.site-description {
-		font-size: 1em;
-	}
 
-}
+	/* ---------------------------------------------
+	## EXTRA SMALL DEVICES (phones, less than 768px)
+	------------------------------------------------*/
+		@media (max-width: 767px) {
+						/* ---------------------------------------------
+						### GENERAL LAYOUT ADJUSTMENTS
+						------------------------------------------------*/
+						body {
+							width:auto;
+						}
 
-/* Small devices (tablets, 768px to 992px) */
-@media (max-width: 992px) {
-				/* ---------------------------------------------
-				## GENERAL LAYOUT ADJUSTMENTS
-				------------------------------------------------*/
-				#page {
-					padding: 0 5%;
+						/* ---------------------------------------------
+						### GENERAL TEXT  ADJUSTMENTS
+						------------------------------------------------*/
+								.site-description {
+									font-size: 1em;
+								}
+
+								.site-title {
+									line-height: normal;
+									font-size: 2em;
+								}
+								.entry-title {
+									font-size:2em;
+								}
+								/* ---------------------------------------------
+								### COLLAPSE MENU FORMATTING
+								------------------------------------------------*/
+
+								.nav > li {
+									float:none; /* make it a list instead */
+								}
+
+								.navbar-nav .open .dropdown-menu,
+								.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+								.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+									color:white;
+									background-color:rgb(81, 42, 19) ;
+								}
+
+								.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+								.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
+									background-color: rgb(122, 60, 24);
+									color:white;
+								}
+
+								.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+								.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+								.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus  {
+									color:white;
+								}
+
+								.navbar-default .navbar-nav > .active > a {
+									background-color: rgb(169, 87, 38); /*reset the background color for the current page */
+								}
+
+								/* ---------------------------------------------
+								#### FORMAT THE HAMBURGER!
+								------------------------------------------------*/
+								.navbar-default .navbar-toggle {
+									border:0;
+								}
+
+								.navbar-toggle {
+									float:none;
+									border:none;
+									background-color:rgb(169, 87, 38);
+									box-shadow:none;
+									width:50px;
+									height:35px;
+									padding: 0 50%;
+								}
+
+								.navbar-default .navbar-toggle:hover,
+								.navbar-default .navbar-toggle:focus {
+									background-color: transparent;
+									box-shadow:none;
+								}
+								.navbar-default .navbar-toggle .icon-bar {
+									background-color:white;
+									width:40px;
+									height:4px;
+									border-radius:10px;
+								}
+
+						/* ---------------------------------------------
+						### HOME PAGE LINK AREA
+						------------------------------------------------*/
+								.linkarea li {
+									min-height: 0;
+								}
+
+					} /* END SMALL DEVICES */
+
+
+		/* ---------------------------------------------
+		##  SMALL DEVICES (tablets, 768px to 992px)
+		------------------------------------------------*/
+		@media (max-width: 992px) {
+						/* ---------------------------------------------
+						## GENERAL LAYOUT ADJUSTMENTS
+						------------------------------------------------*/
+						#page {
+							padding: 0 5%;
+						}
+						body {
+							width:auto;
+						}
+						.widget-area {
+							padding-left: 15px;
+						}
+
+						/* ---------------------------------------------
+						## HOME PAGE FEATURE IMAGE
+						------------------------------------------------*/
+					#feature-image .widget_simpleimage .widget-title {
+						font-size: 1.25em; /* make the font smaller and move the box down */
+						top:100px;
+					}
+					/* ---------------------------------------------
+					## HOME PAGE LINK AREA
+					------------------------------------------------*/
+					.linkarea li {
+						min-height:300px;
+					}
+
+
+		}
+		/* ---------------------------------------------
+		##  MEDIUM DEVICES (desktops, 992px to 1200px)
+		------------------------------------------------*/
+		@media (max-width: 1200px) {
+
 				}
-				body {
-					width:auto;
-				}
-				.widget-area {
-					padding-left: 15px;
-				}
-
-				/* ---------------------------------------------
-				## MENU
-				------------------------------------------------*/
-				.main-navigation a { /* Make the text smaller and tighter*/
-					font-size: 0.8em;
-					padding: 0.8em 1em;
-				}
-				.main-navigation ul ul {
-					top:1em;
-				}
-
-				/* ---------------------------------------------
-				## HOME PAGE FEATURE IMAGE
-				------------------------------------------------*/
-			#feature-image .widget_simpleimage .widget-title {
-				font-size: 1.25em; /* make the font smaller and move the box down */
-				top:100px;
-			}
-
-
-}
-
-/* Medium devices (desktops, 992px to 1200px) */
-@media (max-width: 1200px) {
-
-}

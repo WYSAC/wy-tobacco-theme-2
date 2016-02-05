@@ -13,7 +13,7 @@
 		<div class=" col-md-12 hidden-sm hidden-xs">
 				<?php dynamic_sidebar( 'home-sidebar' ); ?>
 			</div>
-		<div class="widget recent-entries col-md-12 col-sm-12">
+		<div class="widget recent-entries col-md-12 col-sm-6">
 				<h2 class="widget-title">Recent Publications</h2>
 					<ul>
 					<?php
@@ -33,7 +33,7 @@
 					wp_reset_postdata();?>
 					</ul>
 				</div><!-- .widget .recent-entries-->
-			<div class="widget recent-entries col-md-12 col-sm-12">
+			<div class="widget recent-entries col-md-12 col-sm-6">
 					<h2 class="widget-title">Recent Resources</h2>
 						<ul>
 						<?php

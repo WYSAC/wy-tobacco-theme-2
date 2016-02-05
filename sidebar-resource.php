@@ -10,8 +10,10 @@
 
 ?>
 <div id="sidebar-resource" class="widget-area col-md-4 recent-entries">
-		<?php dynamic_sidebar( 'resource-sidebar'); ?>
-	<div class="widget">
+		<div class=" col-md-12 col-sm-6 col-xs-12">
+			<?php dynamic_sidebar( 'resource-sidebar'); ?>
+		</div>
+	<div class="widget col-md-12  hidden-sm hidden-xs">
 				<h2 class="widget-title">Recent Resources</h2>
 					<ul>
 					<?php
@@ -32,7 +34,7 @@
 					</ul>
 		</div>
 
-		<div class="widget">
+		<div class="widget col-md-12  hidden-xs col-sm-6">
 			<h2 class="widget-title">Related Topics</h2>
 					<?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
 		</div>

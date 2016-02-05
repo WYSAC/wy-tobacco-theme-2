@@ -43,6 +43,7 @@ function wysac_wy_tobacco_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'linkarea-feature', 300, 150, array ('center', 'center'));
 	add_image_size( 'entry-feature-large', 750, 250, array ('center', 'center'));
+	add_image_size( 'entry-feature-small', 317, 200, array ('center', 'center'));
 	add_image_size( 'feature-image', 1200, 400, array ('center', 'center'));
 
 	// This theme uses wp_nav_menu() in one location.
@@ -232,8 +233,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
-* Custom Image Sizes
-*/
+ * Register custom nagivation walker class
+ */
+    require_once('wp_bootstrap_navwalker.php');
 
 /**
 * Filter out the labels for the category archive pages
