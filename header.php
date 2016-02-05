@@ -26,8 +26,12 @@
 
 	<header id="masthead" class="site-header" role="banner">
 			<div class="site-branding">
-				<div class="site-description hidden-xs"><a href="http://www.uwyo.edu/wysac">Wyoming Survey & Analysis Center</a>  |  <a href="http://www.uwyo.edu">University of Wyoming</a></div>
-				<div class="site-description hidden-md hidden-lg hidden-sm"><a href="http://www.uwyo.edu/wysac">WYSAC</a>  |  <a href="http://www.uwyo.edu">UWYO</a></div>
+				<div class="site-description hidden-xs">
+					<a href="http://www.uwyo.edu/wysac">Wyoming Survey & Analysis Center</a>  |  <a href="http://www.uwyo.edu">University of Wyoming</a>
+					<?php get_search_form(); ?>
+				</div>
+				<div class="site-description hidden-md hidden-lg hidden-sm"><a href="http://www.uwyo.edu/wysac"><img src="http://dalton.uwyo.edu/wytobacco/wp-content/uploads/2015/08/wysac-icon.png" title="wyoming survey and analysis center" /> WYSAC</a>  |  <a href="http://www.uwyo.edu">UWYO</a></div>
+
 				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span>Wyoming Tobacco</span> </br>Prevention & Control Evaluation<!--<?php bloginfo( 'name' ); ?>--></a></div>
 		</div><!-- .site-branding -->
 		<nav class="navbar navbar-default" role="navigation">

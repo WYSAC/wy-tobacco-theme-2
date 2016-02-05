@@ -16,8 +16,8 @@
 					if (cat_is_ancestor_of(2, $childcat) && has_post_thumbnail() ) {
 						echo '<a class="category-label" href="'.get_category_link($childcat->cat_ID).'">';
 					 	echo $childcat->cat_name . '</a><br/>';
-						echo the_post_thumbnail('entry-feature-large hidden-sm hidden-xs');
-						echo the_post_thumbnail('entry-feature-small hidden-md hidden-lg');
+						echo the_post_thumbnail('entry-feature-large', array('class' => 'hidden-xs'));
+						echo the_post_thumbnail('entry-feature-small', array('class' => 'hidden-sm hidden-md hidden-lg'));
 				 	}
 				 else echo '<span class="post-format-label">' .get_post_format(). '</span>';
 			 }

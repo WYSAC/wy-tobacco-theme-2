@@ -41,9 +41,10 @@ function wysac_wy_tobacco_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+
 	add_image_size( 'linkarea-feature', 300, 150, array ('center', 'center'));
-	add_image_size( 'entry-feature-large', 750, 250, array ('center', 'center'));
-	add_image_size( 'entry-feature-small', 317, 200, array ('center', 'center'));
+	add_image_size( 'entry-feature-large', 750, 250, true );
+	add_image_size( 'entry-feature-small', 317, 200, true );
 	add_image_size( 'feature-image', 1200, 400, array ('center', 'center'));
 
 	// This theme uses wp_nav_menu() in one location.

@@ -33,15 +33,13 @@
 		<div class="row">
 
 		<div class="site-info col-md-12">
-			&#169;<?php the_time('Y');?> <a href="http://wwww.uwyo.edu/wysac">Wyoming Survey & Analysis Center,</a> <a href="http://www.uwyo.edu">University of Wyoming</a> |
+			&#169;<?php echo date("Y");?> <a href="http://wwww.uwyo.edu/wysac">Wyoming Survey & Analysis Center,</a> <a href="http://www.uwyo.edu">University of Wyoming</a> |
 			 <a href="http://www.wordpress.org"><img src="http://dalton.uwyo.edu/wytobacco/wp-content/uploads/2016/01/wp-icon-01.png" width="16" style="padding-bottom:3px;"></a>
 		</div><!-- .site-info -->
 	</div>
 </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
-
 </body>
 </html>

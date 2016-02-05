@@ -1,0 +1,18 @@
+<?php
+/**
+ * The template for displaying search form in the top nav
+ *
+ * @link https://developer.wordpress.org/reference/functions/get_search_form/
+ *
+ * @package WYSAC Wyoming Tobacco
+ */
+?>
+
+<div class="site-search input-group">
+		<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+		<label class="screen-reader-text" for="s">Search for:</label>
+		<input type="text" value="" name="s" id="s" placeholder="Enter your search term..."/>
+      <span class="input-group-btn">
+				<button class="btn btn-default" type="button" id="searchsubmit"><span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span></button>
+      </span>
+</div><!-- /input-group -->
