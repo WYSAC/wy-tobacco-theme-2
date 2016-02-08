@@ -692,7 +692,7 @@ overflow-x: hidden;
 	color:white;
 	font-size: 1.35em;
 	top:55%;
-	max-width: 700px;
+	max-width: 75%;
 	line-height: 1.75;
 	padding: 1em;
 	background: rgb(53, 53, 53); /* fall back */
@@ -1417,16 +1417,72 @@ object {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
+		/* ---------------------------------------------
+		##  FIX NAV & Search Field  on some Tablets (@ 840px )
+		------------------------------------------------*/
+
+		@media (min-width:768px) and (max-width:840px) {
+			.nav > li > a {
+				padding: 10px;
+			}
+			.search-form {
+				display:none;
+			}
+		}
+
+		/* ---------------------------------------------
+		##  SMALL DEVICES (tablets, 768px to 992px)
+		------------------------------------------------*/
+		@media (max-width: 992px) {
+						/* ---------------------------------------------
+						## GENERAL LAYOUT ADJUSTMENTS
+						------------------------------------------------*/
+
+						body {
+							width:auto;
+						}
+
+						#page {
+							padding: 0 5%;
+						}
+						.widget-area {
+							padding-left: 15px;
+						}
+
+						/* ---------------------------------------------
+						## HOME PAGE FEATURE IMAGE
+						------------------------------------------------*/
+					#feature-image .widget_simpleimage .widget-title {
+						font-size: 1.25em;
+						top:50%; /* make the font smaller and move the box down */
+					}
+					/* ---------------------------------------------
+					## HOME PAGE LINK AREA
+					------------------------------------------------*/
+					.linkarea li {
+						min-height:300px;
+					}
+		}
+		/* ---------------------------------------------
+		##  MEDIUM DEVICES (desktops, 992px to 1200px)
+		------------------------------------------------*/
+		@media (max-width: 1200px) {
+
+				}
 
 	/* ---------------------------------------------
 	## EXTRA SMALL DEVICES (phones, less than 768px)
 	------------------------------------------------*/
-		@media (max-width: 737px) {
+		@media (max-width: 767px) {
 						/* ---------------------------------------------
 						### GENERAL LAYOUT ADJUSTMENTS
 						------------------------------------------------*/
 						body {
 							width:auto;
+						}
+
+						.site-content {
+							padding:0 0 0 0 ;
 						}
 
 						/* ---------------------------------------------
@@ -1442,6 +1498,10 @@ object {
 								}
 								.entry-title {
 									font-size:2em;
+								}
+
+								h1.home-page-heading {
+									margin-top:0;
 								}
 								/* ---------------------------------------------
 								### COLLAPSE MENU FORMATTING
@@ -1510,44 +1570,20 @@ object {
 									min-height: 0;
 								}
 
-					} /* END SMALL DEVICES */
-
-
-		/* ---------------------------------------------
-		##  SMALL DEVICES (tablets, 768px to 992px)
-		------------------------------------------------*/
-		@media (max-width: 992px) {
-						/* ---------------------------------------------
-						## GENERAL LAYOUT ADJUSTMENTS
-						------------------------------------------------*/
-						#page {
-							padding: 0 5%;
-						}
-						body {
-							width:auto;
-						}
-						.widget-area {
-							padding-left: 15px;
-						}
-
-						/* ---------------------------------------------
-						## HOME PAGE FEATURE IMAGE
-						------------------------------------------------*/
-					#feature-image .widget_simpleimage .widget-title {
-						font-size: 1.25em; /* make the font smaller and move the box down */
-					}
 					/* ---------------------------------------------
-					## HOME PAGE LINK AREA
+					### HOME PAGE Feature Image
 					------------------------------------------------*/
-					.linkarea li {
-						min-height:300px;
+
+					#feature-image .widget_simpleimage .widget-title {
+						height:100%;
+						max-width:100%;
+						top:0;
+						font-size:1.5em;
 					}
 
+					#feature-image .widget_simpleimage img {
+						width:100%;
+						min-height:75S%;
+					}
 
-		}
-		/* ---------------------------------------------
-		##  MEDIUM DEVICES (desktops, 992px to 1200px)
-		------------------------------------------------*/
-		@media (max-width: 1200px) {
-
-				}
+					} /* END SMALL DEVICES */
