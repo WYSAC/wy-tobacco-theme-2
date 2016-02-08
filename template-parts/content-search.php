@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="margin-bottom:3em;">
 	<header class="entry-header">
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 'post' == get_post_type() ) : //If this is a Post ?>
 				<div class="archive-entry-meta"> <span class="post-date">
 					<?php
 								if ( in_category(array('2','3','4','5')) ) { //If a publications cat or child-cat
@@ -35,6 +35,10 @@
 								the_author_posts_link();
 							} ?></p>
 		<?php endif; ?>
+
+		<?php if ('page' == get_post_type() ) : //If this is a actually a page ?>
+			<?php the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php endif;?>
 
 	</header><!-- .entry-header -->
 

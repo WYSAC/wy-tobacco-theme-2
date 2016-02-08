@@ -8,26 +8,22 @@
  */
 
 ?>
-
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wysac-wy-tobacco' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Sorry... Nothing was found', 'wysac-wy-tobacco' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wysac-wy-tobacco' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
-
-		<?php elseif ( is_search() ) : ?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wysac-wy-tobacco' ); ?></p>
-			<?php get_search_form(); ?>
-
 		<?php else : ?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wysac-wy-tobacco' ); ?></p>
+			<div class="col-md-8">
+			<h4><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wysac-wy-tobacco' ); ?></h4>
+		</div>
+		<div class="col-md-4">
 			<?php get_search_form(); ?>
+		</div>
+			<img src="<?php echo get_site_url(); ?>/wp-content/uploads/2016/02/nothing.gif" style="width:100%;height:auto;">
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
