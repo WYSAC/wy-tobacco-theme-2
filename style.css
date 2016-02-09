@@ -1097,6 +1097,15 @@ img.magic_fields {
 	align-items: center;
 }
 
+/*
+* Format the Pages lists in the About sidebar
+*/
+
+li.page_item {
+	list-style: none;
+}
+
+
 /*--------------------------------------------------------------
 ## Footer Widgets
 --------------------------------------------------------------*/
