@@ -11,6 +11,7 @@
 ?>
 <div id="sidebar-pub" class="widget-area col-md-4 recent-entries">
 	<div class="widget col-md-12 col-sm-12 col-xs-12">
+
 		<h2 class="widget-title"> Table of Contents</h2>
 		<?php
 		//Print the formatted table of contents for the post
@@ -33,6 +34,11 @@
 							wp_reset_query();
 							?>
 						</p>
+		</div>
+
+		<div class="widget col-md-12 col-sm-6 col-xs-12">
+			<h2 class="widget-title">Download Publication</h2>
+					<?php createDownloadLink('Get the PDF');?>
 		</div>
 
 		<div class="widget col-md-12 col-sm-6 col-xs-12">
