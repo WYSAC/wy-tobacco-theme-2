@@ -296,6 +296,10 @@ textarea {
 	line-height: 1.5;
 	font-family:'Merriweather', 'Georgia', serif;
 }
+
+.btn-default { /*overides bootstrap*/
+	font-family: 'Open Sans', 'Franklin Gothic', Arial, sans-serif;
+}
 /*--------------------------------------------------------------
 ## Headers
 --------------------------------------------------------------*/
@@ -335,14 +339,16 @@ h5 {
 		font-size:1.1em;
 }
 
-h6,
-blockquote {
+h6{
 	font-family:'Merriweather', 'Georgia', serif;
 	font-style: italic;
 	font-size:1em;
+	font-weight: bold;
 }
-h6 {
-	font-weight:bold;
+blockquote {
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:1em;
+	color:rgb(132,132,132);
 }
 
 
@@ -410,7 +416,7 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 2.0em 1.5em;
 }
 
 address {
@@ -1282,7 +1288,6 @@ a:hover.category-label{
 */
 
 .format-quote .entry-content blockquote {
-	font-style: normal;
 	font-size:2em;
 	line-height: 1.75;
 	padding:2em;
@@ -1292,7 +1297,7 @@ a:hover.category-label{
 	background-repeat: no-repeat;
 	background-position: 8% 14%;
 	border:none;
-	margin:none;
+	margin:1em 0;
 }
 
 
@@ -1332,7 +1337,16 @@ a:hover.category-label{
 	margin-bottom:0.5em;
 }
 
-.archive-entry-footer {
+.archive-entry-footer a {
+	text-transform:none;
+	font-size:1.25em;
+	letter-spacing: 0;
+	color:rgb(74,74,74);
+	font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
+}
+
+.archive-entry-footer a:hover {
+		color:rgb(194, 125, 56);
 }
 
 .section-title {

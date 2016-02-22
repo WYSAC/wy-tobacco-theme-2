@@ -42,11 +42,10 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="archive-entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
+		<div class="archive-entry-summary">
+					<?php the_excerpt(); ?>
+					 </div>
 	<footer class="entry-footer archive-entry-footer">
-		<a href="<?php the_permalink(); ?>"> Read more...</a>
+		<a href="<?php the_permalink(); ?>"> Read more »</a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
