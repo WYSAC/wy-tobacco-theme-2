@@ -311,10 +311,10 @@ h1,
 }
 
 h2 {
-		font-family:'Merriweather', 'Georgia', serif;
+		font-family:'Open Sans', 'Franklin Gothic', Arial, sans-serif;
 		color:rgb(132,132,132);
 		font-size:1.5em;
-		font-style:italic;
+		line-height: 1.35;
 }
 
 h3 {
@@ -879,6 +879,8 @@ span.page-numbers.current {
 	background-color: rgb(200, 193, 193);
 }
 
+
+
 /*--------------------------------------------------------------
 ## Post pagination
 --------------------------------------------------------------*/
@@ -1245,12 +1247,54 @@ a:hover.category-label{
 
 
 /*--------------------------------------------------------------
-## Asides
+## Post Formats: links, images, videos, quotes
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
 }
+
+/*
+* 		LINKS
+*/
+
+.format-link .entry-content  a {
+	font-family:'Open Sans', Helvetica, Arial, sans-serif;
+	font-size:1.25em;
+	color:rgb(74,74,74);
+	padding:1em 1em 1em 5em;
+	background-color: rgb(232,229,229);
+	display:block;
+	background-image: url(images/icon-link.png);
+	background-size: 3.8em;
+	background-repeat: no-repeat;
+	margin: 1em 0;
+}
+
+.format-link .entry-content  a:hover,
+.format-link .entry-content  a:active,
+.format-link .entry-content  a:focus {
+	background-color:rgb(229, 224, 224);
+}
+
+/*
+*				QUOTES
+*/
+
+.format-quote .entry-content blockquote {
+	font-style: normal;
+	font-size:2em;
+	line-height: 1.75;
+	padding:2em;
+	background-color: rgb(232,229,229);
+	background-image: url(images/icon-quote.png);
+	background-size: 3em;
+	background-repeat: no-repeat;
+	background-position: 8% 14%;
+	border:none;
+	margin:none;
+}
+
 
 /*--------------------------------------------------------------
 ## Archives
@@ -1280,6 +1324,7 @@ a:hover.category-label{
 	font-size:1.0em;
 	color:#55565A;
 	line-height: 1.4;
+	font-family: 'Merriweather', Georgia, serif;
 }
 
 .archive-entry-summary p {

@@ -11,8 +11,6 @@
 ?>
 <div id="sidebar-pub" class="widget-area col-md-4 recent-entries">
 	<div class="widget col-md-12 col-sm-12 col-xs-12">
-
-		<h2 class="widget-title"> Table of Contents</h2>
 		<?php
 		//Print the formatted table of contents for the post
 			if( function_exists( 'wptopc' ) ){
@@ -37,8 +35,8 @@
 		</div>
 
 		<div class="widget col-md-12 col-sm-6 col-xs-12">
-			<h2 class="widget-title">Download Publication</h2>
-					<?php createDownloadLink('Get the PDF');?>
+			<h2 class="widget-title">Get the Report</h2>
+					<?php createDownloadLink('<span class="glyphicon glyphicon-file"></span> Download PDF');?>
 		</div>
 
 		<div class="widget col-md-12 col-sm-6 col-xs-12">
