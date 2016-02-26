@@ -254,5 +254,4 @@ add_filter( 'get_the_archive_title', function ($title) {
             $title = '<h2 class="section-title">Author</h2><h1 class="page-title"><span class="vcard">' . get_the_author() . '</span>' ;
         }
     return $title;
-
-});
+	});
